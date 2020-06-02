@@ -1,0 +1,65 @@
+version: '3'
+services:
+
+  #PHP Service
+  app:
+    build: ./php
+    image: felipemeddeiros/php
+    container_name: app
+    restart: unless-stopped
+    environment:
+      SERVICE_NAME: app
+      SERVICE_TAGS: dev
+    volumes:
+      - ../webservice:/var/www
+      - ./php/local.ini:/usr/local/etc/php/conf.d/local.ini
+    networks:
+      - app-network
+
+  #Nginx Service
+  webserver:
+    image: nginx:alpine
+    container_name: webserver
+    restart: unless-stopped
+    ports:
+      - "80:80"
+    volumes:
+      - ../webservice:/var/www
+      - ./nginx/sites/:/etc/nginx/conf.d/
+      - ./nginx/log/:/var/log/nginx/
+    networks:
+      - app-network
+
+  #MySQL Service
+  mysql:
+    image: mysql:8.0.20
+    container_name: mysql
+    restart: unless-stopped
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_DATABASE: productManagement
+      MYSQL_ROOT_PASSWORD: root
+      SERVICE_TAGS: dev
+      SERVICE_NAME: mysql
+    volumes:
+      - ./mysql/dbdata:/var/lib/mysql/
+      - ./mysql/my.cnf:/etc/mysql/my.cnf
+    networks:
+      - app-network
+
+  npm-vue:
+    build: ./npm
+    container_name: npm-vue
+    image: felipemeddeiros/npm-vue
+    restart: unless-stopped
+    volumes:
+      - ../front-vue:/var/www
+    command: bash -c "npm i && npm run dev"
+    networks:
+      - app-network
+
+#Docker Networks
+networks:
+  app-network:
+    driver: bridge
