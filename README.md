@@ -8,6 +8,10 @@
  - Docker
  - Materialize
 
+#### Repositórios
+ - [API Laravel](https://github.com/felipemeddeiros/product-management-webservice)
+ - [App Vue](https://github.com/felipemeddeiros/product-management-front-vue)
+
 #### Descrição do sistema
 Desenvolvi uma aplicação com ***Vue.js*** e uma ***API REST*** com ***Laravel***. As duas aplicações são totalmente independentes. Utilizei ***Laravel Passport*** para autenticação. Todas as chamadas são validadas por token.
 
