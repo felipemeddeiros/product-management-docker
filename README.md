@@ -39,7 +39,7 @@ You have to include this on your hosts file.
 127.0.0.1	vueapp.local
 ```
 
->***hosts directory:*** 
+***hosts directory:*** 
 - **Windows**: C:/Windows/System32/Drivers/etc/hosts
 - **Linux**: /etc/hosts
 
