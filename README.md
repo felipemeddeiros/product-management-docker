@@ -1,13 +1,13 @@
 # Product Management Project 
 
-#### Technologies
+### Technologies
  - Laravel 7
  - Vue.js 2
  - Mysql
  - Docker
  - Materialize
 
-#### Repositories
+### Repositories
  - [API Laravel](https://github.com/felipemeddeiros/product-management-webservice) - please clone the repository as ***webservice***
  - [App Vue](https://github.com/felipemeddeiros/product-management-front-vue) - please clone the repository as ***front-vue***
 
@@ -33,15 +33,17 @@ $ docker container exec -it app composer install \
 
 ### Mapping hosts
 
-hosts directory:
-> **Windows**: C:/Windows/System32/Drivers/etc/hosts
-> **Linux**: /etc/hosts
-
-You have to include this.
+You have to include this on your hosts file.
 ```text
 127.0.0.1	crudprod.api.local
 127.0.0.1	vueapp.local
 ```
+
+> ***hosts directory:***
+**Windows**: C:/Windows/System32/Drivers/etc/hosts
+**Linux**: /etc/hosts
+
+### Links
 
 Now the system is available on the following links: 
  - http://vueapp.local
