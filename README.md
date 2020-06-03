@@ -43,6 +43,6 @@ You have to include this.
 127.0.0.1	vueapp.local
 ```
 
-Now the system show on the following links: 
+Now the system is available on the following links: 
  - http://vueapp.local
  - http://crudprod.api.local
