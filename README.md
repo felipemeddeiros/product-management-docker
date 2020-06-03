@@ -8,7 +8,7 @@
  - Materialize
 
 ### Repositories
- - [API Laravel](https://github.com/felipemeddeiros/product-management-webservice) - please clone the repository as ***webservice***
+ - [API Laravel](https://github.com/felipemeddeiros/product-management-webservice) - please clone the repository as ***webservice*** - [link already online](https://app-product-management.herokuapp.com/)
  - [App Vue](https://github.com/felipemeddeiros/product-management-front-vue) - please clone the repository as ***front-vue***
 
 ### Instructions
