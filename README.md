@@ -1,4 +1,4 @@
-# Project Product Management
+# Product Management Project 
 
 #### Technologies
  - Laravel 7
@@ -19,16 +19,16 @@ $ docker-compose up -d
 ```
 
 ```sh
-$ docker-compose exec app composer install \
-	&& docker-compose exec app cp .env.example .env \
-	&& docker-compose exec app php artisan key:generate \
-	&& docker-compose exec app php artisan config:cache \
-	&& docker-compose exec app composer dump-autoload \
-	&& docker-compose exec app php artisan migrate \
-	&& docker-compose exec app php artisan db:seed \
-	&& docker-compose exec app php artisan passport:install \
-	&& docker-compose exec app php artisan optimize:clear \
-	&& docker-compose exec app php artisan storage:link
+$ docker container exec -it app composer install \
+	&& docker container exec -it app cp .env.example .env \
+	&& docker container exec -it app php artisan key:generate \
+	&& docker container exec -it app php artisan config:cache \
+	&& docker container exec -it app composer dump-autoload \
+	&& docker container exec -it app php artisan migrate \
+	&& docker container exec -it app php artisan db:seed \
+	&& docker container exec -it app php artisan passport:install \
+	&& docker container exec -it app php artisan optimize:clear \
+	&& docker container exec -it app php artisan storage:link
 ```
 
 ### Mapping hosts
@@ -43,5 +43,6 @@ You have to include this.
 127.0.0.1	vueapp.local
 ```
 
-Now the system show be available here: http://vueapp.local
-And the API here: http://crudprod.api.local
+Now the system show on the following links: 
+ - http://vueapp.local
+ - http://crudprod.api.local
